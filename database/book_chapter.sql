@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 13 Nov 2024 pada 04.54
+-- Waktu pembuatan: 13 Nov 2024 pada 20.10
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.2.12
 
@@ -87,7 +87,8 @@ CREATE TABLE `orders` (
 
 INSERT INTO `orders` (`order_id`, `user_id`, `chapter_id`, `status`, `order_date`, `payment_proof_path`) VALUES
 (1, 1, 1, 'approved', '2024-11-12 19:13:57', 'uploads/graphviz.png'),
-(2, 2, 2, 'approved', '2024-11-13 03:45:18', 'uploads/Flow Book Chapter Admin.drawio.png');
+(2, 2, 2, 'approved', '2024-11-13 03:45:18', 'uploads/Flow Book Chapter Admin.drawio.png'),
+(3, 3, 2, 'rejected', '2024-11-13 03:57:55', 'uploads/graphviz.png');
 
 -- --------------------------------------------------------
 
@@ -132,7 +133,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`user_id`, `username`, `password`, `email`, `full_name`, `created_at`) VALUES
 (1, 'farhan', '$2y$10$jNMzuEDAhl/QOQPuFKrf2OToYeIQ5LO2hea2fySDcWsPwPixXH24i', 'farhan@gmail.com', 'Farhan Rizki Maulana', '2024-11-12 19:03:28'),
-(2, 'riziq', '$2y$10$..sEMmvrOSSel1NWXfKUu.yROmAXbaUNcqgTa50Aj2q3KjGRVoGRW', 'farhanriziq@gmail.com', 'Farhan Riziq', '2024-11-13 03:43:42');
+(2, 'riziq', '$2y$10$..sEMmvrOSSel1NWXfKUu.yROmAXbaUNcqgTa50Aj2q3KjGRVoGRW', 'farhanriziq@gmail.com', 'Farhan Riziq', '2024-11-13 03:43:42'),
+(3, 'fahad', '$2y$10$rz40f1RctFtRNh4BXp7uWuXVEOcTtyo1jyy18QrBIh17PAJB0176C', 'fahad@gmail.com', 'Fahad Abdul Aziz', '2024-11-13 03:56:59');
 
 --
 -- Indexes for dumped tables
@@ -195,7 +197,7 @@ ALTER TABLE `chapters`
 -- AUTO_INCREMENT untuk tabel `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `uploads`
@@ -207,7 +209,7 @@ ALTER TABLE `uploads`
 -- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
